@@ -216,3 +216,4 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+week1.1/session_2/tasks/_data/lateness_data.csv

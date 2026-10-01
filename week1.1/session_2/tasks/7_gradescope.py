@@ -4,9 +4,16 @@
 
 # Ask a user to enter two numbers (one per input)
 
+try:
+    input1 = int(input("Enter a number: "))
+    input2 = int(input("Enter another number: "))
+except: print("That is not a number")
+
 # multiply those numbers together
+result = input1 * input2
 
 # print out the result
+print(result)
 
 # There is an extra point available for validating that they entered numbers!
 # Add to your code so that if they entered something other than an integer it prints

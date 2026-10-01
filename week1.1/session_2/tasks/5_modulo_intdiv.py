@@ -18,9 +18,21 @@ for row in data:
     # for example: if minutes_late is 2000, then days = 1, hours = 9, minutes = 20
     # hint: there are 1440 minutes in a day (24 * 60)
     
-    days = 0
-    hours = 0
-    minutes = 0
-    
+    days = minutes_late // 1440
+    hours =  (minutes_late % 1440) // 60
+    minutes = (minutes_late % 1440) % 60
+
+    """ divmod function can also be used
+    divmod will calculate the quotient and remainder of a division at the same time
+
+    days, remainder = divmod(minutes_late, 1440)
+    hours, minutes = divmod(remainder, 60)
+
+    this is how it works
+    quotient, remainder = divmod(23, 5)
+    print(quotient)   # Outputs: 4
+    print(remainder)  # Outputs: 3
+    """
+
     print(f"Student {row[0]}: {days}D {hours}H {minutes}M")
 
