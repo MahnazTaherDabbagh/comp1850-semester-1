@@ -12,7 +12,7 @@ print(f"Welcome to LeedsBank's savings calculator {name}!")
 try:
     monthly_savings = int(input("Please enter your monthly saving amount: "))
 except ValueError:
-    print("Invalid amount.")
+    print("Invalid amount")
     exit()
 
 # Calculate the total amount of money they will have saved by the end of the year (amount per month multiplied by 12).
