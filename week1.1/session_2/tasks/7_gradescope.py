@@ -7,7 +7,9 @@
 try:
     input1 = int(input("Enter a number: "))
     input2 = int(input("Enter another number: "))
-except: print("That is not a number")
+except ValueError:
+    print("That is not a number")
+    exit()
 
 # multiply those numbers together
 result = input1 * input2
