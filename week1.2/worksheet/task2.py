@@ -27,13 +27,13 @@ middle = len(numbers) // 2
 
 # Calculate the median
 if len(numbers) % 2 == 1:
-    # Odd number of elements: use the middle element
+    #   If numbers are odd, use the middle number
     median = numbers[middle]
 else:
-    # Even number of elements: average the two middle elements
+    # Even numbers are even, average the two middle number
     median = (numbers[middle - 1] + numbers[middle]) / 2
 
-# Display the statistics
+# Display the numbers
 print(f"Minimum = {minimum}")
 print(f"Maximum = {maximum}")
 print(f"Mean = {mean}")

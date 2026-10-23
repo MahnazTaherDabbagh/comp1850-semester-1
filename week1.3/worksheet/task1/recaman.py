@@ -1,14 +1,26 @@
 # Worksheet 1.3: Task 1
 
-L = int(input("Length of sequence: ")) # this should be your only input
+L = int(input("Length of sequence: ")) # Only one input
 
 
-# Your code for the Recaman Sequence
-# You should store the sequence in an appropriate data structure named 'sequence'
+# Start the sequence with the first term
+sequence = [0]
 
+# Generate the remaining terms
+for k in range(1, L):
 
-# You may wish to use further output for testing purposes while you develop your code
+    # Try subtracting k from the previous term
+    candidate = sequence[-1] - k
 
-[print(item) for item in sequence]    # this method is reasonably independent of the choice of data structure
+    # Use the subtraction result if:
+    # It is positive
+    # It is not already in the sequence
+    if candidate > 0 and candidate not in sequence:
+        sequence.append(candidate)
 
-# The web page https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence shows about 80 numbers in the sequence
+    # Otherwise use addition
+    else:
+        sequence.append(sequence[-1] + k)
+
+# Print each term of the sequence on a new line
+[print(item) for item in sequence]
